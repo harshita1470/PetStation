@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 
-.wrapper{
+body{
     background-color: #90AACB;
-    height: 100vh;
+}
+
+.wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +16,14 @@
 
 .wrapper__container{
     background-color: white;
-    height: 80vh;
     border-radius: 20px;
+}
+
+#illustrationContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper__loginForm{
@@ -23,4 +31,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+}
+
+.illus{
+    max-height: 500px;
 }

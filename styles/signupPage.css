@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #90AACB;
+}
+
 .wrapper{
     background-color: #90AACB;
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -22,4 +25,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+#illustrationContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.illus{
+    max-height: 500px;
 }
