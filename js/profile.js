@@ -3,22 +3,56 @@
     var doc=firebase.firestore().collection("users").doc(user.uid)
     doc.get().then((userdata) => {
            if(userdata.exists) {
+               // current user info
                console.log(userdata.data().name)
            }
            else {
                console.log("data does not exist")
            }
-           console.log(user.uid)
+    
+           // for retreiving all the requests made by current user
            firebase.firestore().collection("requestsMade").where('userId','==',user.uid).get().then((querySnapshot) => {
             console.log(querySnapshot.docs)
             querySnapshot.docs.forEach((doc) => {
-                // doc.data() is never undefined for query doc snapshots
                 console.log(doc.data());
             })
             .catch((error) => {
                 console.log(error)
             })
-        });
+           });
+
+
+           // for retreiving all the pets registered by current user
+           firebase.firestore().collection("Pets").where('ownerId','==',user.uid).get().then((querySnapshot) => {
+            querySnapshot.docs.forEach((doc) => {
+                console.log(doc.data());
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+           });
+
+           // for retreiving all the requests for current user's pets
+           firebase.firestore().collection("requestsMade").get().then((querySnapshot) => {
+            querySnapshot.docs.forEach((doc) => {
+                var pet=doc.data().petId
+                var owner=firebase.firestore().collection("Pets").doc(pet)
+                owner.get().then((pet) => {
+                   if(user.uid==pet.ownerId) {
+                       console.log(doc.data())
+                   }
+                   else {
+                       
+                   }
+                })
+                .catch((error) => {
+                    console.log(error)
+                });
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+           });
            
     })
     .catch((error) => {
