@@ -7,7 +7,7 @@ async function login(e){
     const password = document.getElementById("password").value
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then( () => {
-        location.replace("userprofile.html")
+        location.replace("../userProfile.html")
     })
     .catch((error)=>{
         console.log(error)
