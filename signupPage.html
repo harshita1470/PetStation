@@ -13,29 +13,29 @@
 
   <body>
     <main>
-        <!-- navbar -->
-        <nav>
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="./index.html">
-            <span class="ml-3 text-xl">PetStation</span>
-          </a>
-        </nav>
-
         <!-- main wrapper -->
-        <div class='container-fluid wrapper'>
+        <div class='container-fluid wrapper py-3'>
             <!-- main container -->
-            <div class='container wrapper__container row p-0 mb-3'>
+            <div class='container wrapper__container row'>
                 <!-- illustration -->
-                <div class='col-12 col-md-6'>
-                    <img class="img-fluid" src="./assets/signup.svg" alt="signup illustration" />
+                <div class='col-12 col-md-6' id="illustrationContainer">
+                  <div class="container-fluid p-3" >
+                    <a href="./index.html">
+                      <img class="img-fluid" width="50px" height="50px" src="./assets/logo.png" alt="banner" />
+                    </a>     
+                  </div>
+                  <div class="container-fluid p-2">
+                    <img class="img-fluid illus" src="./assets/signup.svg" alt="signup illustration" />
+                  </div>  
                 </div>
 
                 <!-- Signup form -->
                 <div class='col-12 col-md-6 wrapper__signupForm'>
-                    <div class="container">
+                    <div class="container mb-5">
                         <h1>Sign Up</h1>
                     </div>
 
-                    <div class="container">
+                    <div class="container mb-3">
                       <form class="p-2" autocomplete="off">
                         <div class="mb-3">
                           <label for="name" class="form-label">Your Name</label>
@@ -61,7 +61,7 @@
                       </form>
                     </div>
                     
-                    <div class="container">
+                    <div class="container pb-3 pb-md-0">
                       Already have an account? <a href="./loginPage.html">Login Page</a>
                     </div>
                 </div>
