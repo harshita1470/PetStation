@@ -1,29 +1,39 @@
-document.getElementById("loginForm").addEventListener("submit",(event)=>{
-    event.preventDefault()
-})
+let userid;
 
-function register() {
-    firebase.auth().onAuthStateChanged((user)=>{
+firebase.auth().onAuthStateChanged((user)=>{
         if(user){
-            const name=getElementById("name").value
-            const age=getElementById("age").value
-            const breed=getElementById("breed").value
-            const weight=getElementById("weight").value
-            const description=getElementById("description").value
-            firebase.firestore().collection("pets").add({
-                name:name,
-                description:description,
-                owner:user.uid,
-                age:age,
-                breed:breed,
-                weight:weight
-            })
+            console.log(user.uid)
+            userid=user.uid
         }
         else {
+            location.replace("index.html")
+            console.log("logged out")
         }
+    });
+
+const registrationfunc= document.getElementById('submitButton');
+registrationfunc.addEventListener('click', register);
+
+function register(e) {
+    e.preventDefault()
+    const name=document.getElementById('name').value
+    const age=document.getElementById("age").value
+    const breed=document.getElementById("breed").value
+    const weight=document.getElementById("weight").value
+    const description=document.getElementById("description").value
+    firebase.firestore().collection("pets").add({
+        name:name,
+        description:description,
+        ownerId:userid,
+        age:age,
+        breed:breed,
+        weight:weight
+    })
+    .then(() => {
+        alert("Your pet has been registered for adoption. Interested users will be sending the request.")
+        location.replace("userProfile.html")
     })
     .catch((error) => {
-    
-
-    });
+        console.log(error)
+   });
 }
