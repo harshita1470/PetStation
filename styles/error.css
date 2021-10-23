@@ -1,0 +1,16 @@
+body{
+    background:rgb(151, 216, 224);
+}
+.main-text{
+    font-weight: bold;
+    color: rgb(3, 61, 63);
+    margin-top: 40px;
+}
+.other-text{
+    font-weight: 500;
+    color: rgb(218, 129, 77);
+}
+img{
+    max-height: 400px;
+    max-height: 400px;
+}
