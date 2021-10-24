@@ -73,8 +73,13 @@ function logout(){
     location.replace("index.html")
 }
 
+const logoutButton = document.getElementById('logoutButton');
+logoutButton.addEventListener('click', logout);
+
 function renderData() {
     // yahan code likh do
     // sirf userPets ka data show karna
     
 }
+
+console.log(userPets);
