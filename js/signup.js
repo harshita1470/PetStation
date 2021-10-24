@@ -8,7 +8,7 @@ async function signUp(e) {
     const email = document.getElementById("email").value
     const name = document.getElementById("name").value
     const password = document.getElementById("password").value
-    const repassword = document.getElementById("repassword").value
+   // const repassword = document.getElementById("repassword").value
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((cred) => {
         console.log(email)
