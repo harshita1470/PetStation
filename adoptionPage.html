@@ -8,46 +8,56 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/jpg" href="./assets/logo.png" />
-
+    <link href='./styles/adoptionPage.css' rel="stylesheet" type="text/css" />
     <title>PetStation | Put on Adoption</title>
   </head>
 
   <body>
-      <div class="container p-2">
-          <h1>Put On Adoption</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./userProfile.html">
+          <img class="img-fluid" width="50px" height="50px" src="./assets/logo.png" alt="banner" />
+        </a>
+      </div>
+    </nav>
+
+    <div class="container wrapper p-3">
+      <div class="container wrapper__heading p-3">
+        <h2>Put On Adoption <span><img src="./assets/paw.png" alt="image" /></span></h2> 
       </div>
 
-      <div class="container p-2">
+      <div class="container wrapper__form p-3">
         <form autocomplete="off">
-            <div class="mb-3">
-              <label for="name" class="form-label">Pet Name</label>
-              <input type="text" name="name" class="form-control" id="name">
-            </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Pet Name</label>
+            <input type="text" name="name" class="form-control" id="name">
+          </div>
 
-            <div class="mb-3">
-              <label for="age" class="form-label">Age</label>
-              <input type="text" name="age" class="form-control" id="age">
-            </div>
+          <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="text" name="age" class="form-control" id="age">
+          </div>
 
-            <div class="mb-3">
-                <label for="breed" class="form-label">Breed</label>
-                <input type="text" name="breed" class="form-control" id="breed">
-            </div>
+          <div class="mb-3">
+              <label for="breed" class="form-label">Breed</label>
+              <input type="text" name="breed" class="form-control" id="breed">
+          </div>
 
-            <div class="mb-3">
-                <label for="weight" class="form-label">Weight</label>
-                <input type="text" name="weight" class="form-control" id="weight">
-            </div>
+          <div class="mb-3">
+              <label for="weight" class="form-label">Weight</label>
+              <input type="text" name="weight" class="form-control" id="weight">
+          </div>
 
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <input type="text" name="description" class="form-control" id="description">
-            </div>
+          <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <input type="text" name="description" class="form-control" id="description">
+          </div>
 
 
-            <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
-          </form>
+          <button type="submit" id="submitButton" class="btn btn-outline-success">Submit</button>
+        </form>
       </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
