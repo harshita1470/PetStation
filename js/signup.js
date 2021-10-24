@@ -22,6 +22,9 @@ async function signUp(e) {
         .then((docRef) => {
             alert("Signup successful")
         })
+        .then(()=>{
+            location.replace("userProfile.html")
+        })
         .catch((error) => {
             alert("data not saved")
         });
